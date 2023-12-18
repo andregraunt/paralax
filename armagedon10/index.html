@@ -1,0 +1,298 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>armagedon23</title>
+</head>
+
+<body>
+  <h3>ARMAGEDON √2023</h3>
+ <span><div class="button-start" id="peopleCounter"></div></span>
+    <br>
+  <div class="button-start" id="zombiesCounter"></div>
+  <form>
+    <label for="people">Count People :</label><br>
+    <input type="number" id="people" name="people"><br>
+
+    <label for="zombies">Count Zombies:</label><br>
+    <input type="number" id="zombies" name="zombies">
+  </form>
+  <br>
+
+  <button class="button-start" onclick="run()" style="font-size: 15px; padding: 1px; border-color: green;">Run game!</button>
+
+  <!--<div id="output" style="width: 600px; height: 400px; border: 1px solid black; margin-top: 20px;"></div>-->
+  <div id="output" style="border: 2px solid black; margin-top: 20px; margin-bottom: 10px; padding: 3px;">area for news of war</div>
+
+  <style>
+    /* Стили для резиновой рамки
+       .button-start {
+	font-family: Arial;
+	font-weight: 600;
+	text-transform: uppercase;
+	font-size: calc(var(--index) * .71);
+	letter-spacing: -.02vw;
+	padding: calc(var(--index) * .7) calc(var(--index) * 1.25);
+	background-color: green;
+	color: red;
+
+	border-radius: 10em;
+	border: rgb(255 255 255 / .4) 3px solid;
+	outline: none;
+	cursor: pointer;
+	margin-top: calc(var(--index) * 2.5);
+}
+
+  #output {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  max-height: 600px;
+  overflow-y: auto;  
+}
+
+#output p {
+  white-space: pre-wrap;
+  margin: 10px;  
+}
+*/
+    body {
+      /* display: flex; */
+/* align-items: center; */
+/* flex-grow: 1; */
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+
+  
+    align-items: center ;
+    justify-content: center;
+	
+
+    }
+    .button-start {
+	font-family: Arial;
+	font-weight: 600;
+	text-transform: uppercase;
+	font-size: calc(var(--index) * .71);
+	letter-spacing: -.02vw;
+	padding: calc(var(--index) * .7) calc(var(--index) * 1.25);
+	background-color: transparent;
+	color: red;
+	border-radius: 10em;
+	border: rgb(255 255 255 / .4) 3px solid;
+	
+	outline: none;
+	cursor: pointer;
+	margin-top: calc(var(--index) * 2.5);
+}
+
+    #output {
+      height: auto;
+      flex-grow: 1;
+    }
+
+    /*#peopleCounter,*/
+    #zombiesCounter {
+      position: auto;
+      top: 10px;
+      left: 10px;
+      padding: 10px;
+      background: #ddd;
+      /*background: black;*/
+      color: red;
+      font-size: 7mm;
+
+    }
+
+    #peopleCounter {
+      display: flex;
+align-items: center;
+
+
+      position: auto;
+      top: 10px;
+      left: 10px;
+      padding: 10px;
+      background: #ddd;
+      /*background: black;*/
+      color: blue;
+      font-size: 7mm;
+
+    }
+
+    #people {
+      color: blue;
+    }
+
+    #zombies {
+      color: red;
+    }
+  </style>
+
+  <script>
+
+    let output = document.getElementById('output');
+
+    function write(text) {
+      output.innerHTML += text + '<br>';
+    }
+
+    let people;
+    let zombies;
+    zombies = Number(zombies)
+    
+
+    people = Number(people)
+
+    function run() {
+      people = document.getElementById('people').value;
+      zombies = document.getElementById('zombies').value;
+
+      output.innerHTML = '';
+      main();
+    }
+
+    function lucky() {
+      return Math.random() < 0.5;
+    }
+
+    function boom() {
+      let diff = Math.random() * 100;
+      diff = Math.round(diff);
+
+
+      if (lucky()) {
+        zombies -= diff;
+        write(`${diff} zombies dead <br>`);
+      } else {
+
+
+        // ...
+
+        //let num = diff.match(/\d+/)[0];  
+        //zombies += Number(num);
+
+        // people -= num;
+
+        // ...
+
+
+        zombies = +zombies + Number(diff);
+        
+        
+        people -= diff;
+
+        write(`${diff} people dead <br>`);
+        //zombies += diff;
+        //	zombies = zombies + Number(diff);
+      }
+
+    }
+
+    function randomCity() {
+      let dice = Math.floor(Math.random() * 5) + 1;
+
+      if (dice === 1) return 'Tokyo';
+      if (dice === 2) return 'Madrid';
+      if (dice === 3) return 'Los-Vegas';
+      if (dice === 4) return 'Paris';
+      return 'Roma';
+    }
+
+    function randomSleep() {
+      let sleepTime = Math.random() * 1.1 + 0.9;
+      return new Promise(resolve => setTimeout(resolve, sleepTime * 1000));
+    }
+
+    async function event1() {  
+      write(`Rocket fired at ${randomCity()}<br>`);
+      await randomSleep();
+      boom();
+    }
+
+    async function event2() {
+      write(`Air bomb attack at ${randomCity()}<br>`);
+      await randomSleep();
+      boom();
+    }
+
+    async function event3() {
+      write(`A group of soldiers break through <br> the enemy defenses in the city ${randomCity()}<br>`);
+      await randomSleep();
+      boom();
+    }
+
+    async function main() {
+      while (true) {
+
+
+        // код цикла
+
+        //zombies = +zombies + 20; 
+        //document.getElementById('peopleCounter').innerHTML = people; 
+        // document.getElementById('zombiesCounter').innerHTML = zombies;
+
+
+        // ...
+
+        document.getElementById('peopleCounter').innerHTML = 'People      : ' + people;
+        document.getElementById('zombiesCounter').innerHTML = 'Zombie: ' + zombies;
+
+        // ...
+ 
+
+
+        // остальной код...
+
+        if (people <= 0) {
+          write('OH,No,No-o, Game Over');
+          document.getElementById('peopleCounter').innerHTML = 'Oh, No, Game Over';
+
+          break;
+        }
+
+        if (zombies <= 0) {
+          write("Yaa, Yes, Victory!!");
+          document.getElementById('zombiesCounter').innerHTML = "Yaa, Yes, Victory!!";
+
+          break;
+        }
+
+        let event = Math.floor(Math.random() * 3) + 1;
+
+        if (event === 1) {
+          await event1();
+        } else if (event === 2) {
+          await event2();
+        } else {
+          await event3();
+        }
+
+        write(`${people} people and ${zombies} zombies left <br>`);
+
+
+
+        // ...
+
+
+
+        // ...
+
+
+      }
+    }
+
+  </script>
+
+
+
+
+
+
+
+</body>
+
+</html>

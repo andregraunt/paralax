@@ -1,0 +1,40 @@
+100: 1 windows (created Wed Sep 27 10:07:48 2023)
+2048: 1 windows (created Sat Sep 23 18:38:54 2023)
+docker: 1 windows (created Sat Sep 23 17:49:21 2023)
+gopro: 1 windows (created Tue Nov 14 13:29:48 2023)
+mysql: 1 windows (created Sun Oct  1 04:06:58 2023)
+paralax: 1 windows (created Sat Sep 23 18:37:09 2023)
+php_test: 1 windows (created Sat Sep 23 15:18:42 2023)
+phpmyadmin: 1 windows (created Sat Sep 30 20:56:49 2023)
+talia: 1 windows (created Wed Sep 27 10:02:06 2023)
+telegram: 1 windows (created Sat Sep 23 18:39:54 2023)
+torrent: 1 windows (created Wed Sep 27 16:58:55 2023)
+webpy: 1 windows (created Sat Sep 23 18:29:59 2023)
+4     0     667       1  20   0   5956     0 wait_w Ss+  tty4       0:00 /usr/bin/less /var/log/cloud-init.log
+4     0    1052    1026  20   0   8748     8 do_sel Ss+  tty1       0:00 -bash
+0     0    8120    8119  20   0   8924     8 do_wai Ss   pts/1      0:00 -bash
+0     0   10274    8119  20   0   8792     0 do_wai Ss   pts/2      0:00 -bash
+0     0   11179    8120  20   0 175784  1432 do_sel S+   pts/1      1:37 php -S localhost:8888
+0     0   11632    8119  20   0   8924     8 do_wai Ss   pts/3      0:00 -bash
+0     0   11661   11632  20   0  36432 11452 ep_pol S+   pts/3      0:23 python3 notmain.py
+0     0   11685    8119  20   0   8924     8 do_wai Ss   pts/4      0:00 -bash
+0     0   11721    8119  20   0   8792     4 do_wai Ss   pts/5      0:00 -bash
+0     0   11754    8119  20   0   8924     8 do_sel Ss+  pts/6      0:00 -bash
+0     0   11805   11721  20   0 652604 14348 ep_pol Sl+  pts/5      0:02 http-server
+0     0   12036   11685  20   0 1171912 4028 futex_ Sl+  pts/4      4:43 go run server06.go
+4     0   12081   12036  20   0 1312424 2948 futex_ Sl+  pts/4      1:35 /tmp/go-build4114665636/b001/exe/server06
+0     0   86196    8119  20   0   8924     8 do_wai Ss   pts/7      0:00 -bash
+0     0   86262   86196  20   0 655312 11864 ep_pol Sl+  pts/7      0:02 http-server
+0     0   86429    8119  20   0   8924     0 do_wai Ss   pts/8      0:00 -bash
+0     0  108105    8119  20   0   8924     0 do_sel Ss+  pts/9      0:00 -bash
+0     0  211067    8119  20   0   8924     8 do_wai Ss   pts/10     0:00 -bash
+4     0  211132  211067  20   0 293672 16500 do_sel S+   pts/10     2:01 php -S one.nowayno.info:9000
+0     0  217562    8119  20   0   8924     8 do_wai Ss   pts/11     0:00 -bash
+0     0  217613  217562  20   0 217152  3964 do_sel S+   pts/11     1:48 php -S one.nowayno.info:9001
+0     0 1155906   86429  20   0 863948 30420 ep_pol Sl+  pts/8      0:02 http-server
+0     0 1188976   10274  20   0 1180584 3636 futex_ Sl+  pts/2      0:14 docker run -it --name xxx -p 4567:4567 ro31337/rubybook-save-the-world
+4     0 1189039 1189018  20   0 493988 17080 do_sel Ssl+ pts/0      0:02 ruby ./app.rb
+0     0 1189086    8119  20   0   9060    32 do_wai Ss   pts/12     0:00 -bash
+0     0 1209643 1189086  20   0 1018012  404 ep_pol Sl+  pts/12     0:00 ./main
+0     0 1689388 1689387  20   0  10256  7136 do_wai Ss   pts/0      0:00 -bash
+4     0 1690474 1689388  20   0  10084  3364 -      R+   pts/0      0:00 ps -lh
